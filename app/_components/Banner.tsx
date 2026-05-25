@@ -40,35 +40,35 @@ const Banner = () => {
                 className="container h-[100svh] min-h-[530px] max-md:pb-10 flex justify-between items-center max-md:flex-col"
                 ref={containerRef}
             >
-                <div className="max-md:grow max-md:flex flex-col justify-center items-start max-w-[544px]">
+                <div className="max-md:grow max-md:flex flex-col justify-center items-start max-w-[620px]">
                     <h1 className="banner-title slide-up-and-fade leading-[.95] text-6xl sm:text-[80px] font-anton">
-                        <span className="text-primary">FRONTEND</span>
-                        <br /> <span className="ml-4">DEVELOPER</span>
+                        <span className="text-primary">SOFTWARE</span>
+                        <br /> <span className="ml-4">ENGINEER</span>
                     </h1>
                     <p className="banner-description slide-up-and-fade mt-6 text-lg text-muted-foreground">
                         Hi! I&apos;m{' '}
                         <span className="font-medium text-foreground">
-                            Tajmirul
+                            HotHyun
                         </span>
-                        . A creative Frontend Developer with 3+ years of
-                        experience in building high-performance, scalable, and
-                        responsive web solutions.
+                        . I build full-stack products, AI applications, and
+                        automation tools to solve real problems and create
+                        positive impact.
                     </p>
                     <Button
                         as="link"
                         target="_blank"
                         rel="noopener noreferrer"
-                        href={GENERAL_INFO.upworkProfile}
+                        href={GENERAL_INFO.githubProfile}
                         variant="primary"
                         className="mt-9 banner-button slide-up-and-fade"
                     >
-                        Let&apos;s Talk
+                        View GitHub
                     </Button>
 
                     <div className="flex items-center gap-2 mt-3">
                         <span className="size-3 rounded-full bg-white"></span>
                         <span className="text-sm text-muted-foreground">
-                            Available for full-time opportunities
+                            Currently serving as a Naval Software Developer
                         </span>
                     </div>
                 </div>
@@ -76,25 +76,25 @@ const Banner = () => {
                 <div className="md:absolute bottom-[10%] right-[4%] flex md:flex-col gap-4 md:gap-8 text-center md:text-right">
                     <div className="slide-up-and-fade">
                         <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
-                            3+
+                            2+
                         </h5>
                         <p className="text-muted-foreground">
-                            Years of Experience
+                            Years at gazilab
                         </p>
                     </div>
                     <div className="slide-up-and-fade">
                         <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
-                            7+
+                            4
                         </h5>
                         <p className="text-muted-foreground">
-                            Completed Projects
+                            Product Areas
                         </p>
                     </div>
                     <div className="slide-up-and-fade">
                         <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
-                            10K+
+                            POSTECH
                         </h5>
-                        <p className="text-muted-foreground">Hours Worked</p>
+                        <p className="text-muted-foreground">Physics</p>
                     </div>
                 </div>
             </div>

@@ -1,110 +1,63 @@
 import { IProject } from '@/types';
 
 export const GENERAL_INFO = {
-    email: 'tasmirolislam@gmail.com',
+    email: 'ohsong656565@gmail.com',
+    phone: '+82 10-4515-1866',
+    location: 'Haeundae-gu, Busan, Korea',
+    birthday: 'August 27, 2003',
 
-    emailSubject: "Let's collaborate on a project",
-    emailBody: 'Hi Tajmirul, I am reaching out to you because...',
+    emailSubject: "Let's talk",
+    emailBody: 'Hi HotHyun, I am reaching out to you because...',
 
-    oldPortfolio: 'https://www.legacy.me.toinfinite.dev',
-    upworkProfile: 'https://www.upwork.com/freelancers/tajmirul',
+    oldPortfolio: 'https://portfolio.hothyun.com',
+    githubProfile: 'https://github.com/hothyun',
+    instagramProfile: 'https://instagram.com/hot._.hyun',
+    blog: 'https://blog.hothyun.com',
 };
 
 export const SOCIAL_LINKS = [
-    { name: 'github', url: 'https://github.com/Tajmirul' },
-    { name: 'linkedin', url: 'https://www.linkedin.com/in/tajmirul' },
-    { name: 'facebook', url: 'https://www.facebook.com/tajmirul.2000' },
+    { name: 'github', url: GENERAL_INFO.githubProfile },
+    { name: 'instagram', url: GENERAL_INFO.instagramProfile },
+    { name: 'blog', url: GENERAL_INFO.blog },
     { name: 'Old Version', url: GENERAL_INFO.oldPortfolio },
 ];
 
 export const MY_STACK = {
     frontend: [
-        {
-            name: 'JavaScript',
-            icon: '/logo/js.png',
-        },
-        {
-            name: 'TypeScript',
-            icon: '/logo/ts.png',
-        },
-        {
-            name: 'React',
-            icon: '/logo/react.png',
-        },
-        {
-            name: 'Next.js',
-            icon: '/logo/next.png',
-        },
-        {
-            name: 'Redux',
-            icon: '/logo/redux.png',
-        },
-        {
-            name: 'Tailwind CSS',
-            icon: '/logo/tailwind.png',
-        },
-        {
-            name: 'GSAP',
-            icon: '/logo/gsap.png',
-        },
-        {
-            name: 'Framer Motion',
-            icon: '/logo/framer-motion.png',
-        },
-        {
-            name: 'Sass',
-            icon: '/logo/sass.png',
-        },
-        {
-            name: 'Bootstrap',
-            icon: '/logo/bootstrap.svg',
-        },
+        { name: 'JavaScript', icon: '/logo/js.png' },
+        { name: 'TypeScript', icon: '/logo/ts.png' },
+        { name: 'React', icon: '/logo/react.png' },
+        { name: 'Next.js', icon: '/logo/next.png' },
+        { name: 'Tailwind CSS', icon: '/logo/tailwind.png' },
+        { name: 'Framer Motion', icon: '/logo/framer-motion.png' },
+    ],
+    app: [
+        { name: 'React Native', icon: '/logo/react.png' },
+        { name: 'Flutter', icon: '/logo/flutter.svg' },
+        { name: 'Expo', icon: '/logo/expo.svg' },
+        { name: 'Electron', icon: '/logo/electron.svg' },
     ],
     backend: [
-        {
-            name: 'Node.js',
-            icon: '/logo/node.png',
-        },
-        {
-            name: 'NestJS',
-            icon: '/logo/nest.svg',
-        },
-        {
-            name: 'Express.js',
-            icon: '/logo/express.png',
-        },
+        { name: 'Node.js', icon: '/logo/node.png' },
+        { name: 'Express.js', icon: '/logo/express.png' },
+        { name: 'Spring Boot', icon: '/logo/spring.svg' },
+        { name: 'FastAPI', icon: '/logo/fastapi.svg' },
     ],
     database: [
-        {
-            name: 'MySQL',
-            icon: '/logo/mysql.svg',
-        },
-        {
-            name: 'PostgreSQL',
-            icon: '/logo/postgreSQL.png',
-        },
-        {
-            name: 'MongoDB',
-            icon: '/logo/mongodb.svg',
-        },
-        {
-            name: 'Prisma',
-            icon: '/logo/prisma.png',
-        },
+        { name: 'PostgreSQL', icon: '/logo/postgreSQL.png' },
+        { name: 'Oracle SQL', icon: '/logo/oracle.svg' },
+        { name: 'Firebase', icon: '/logo/firebase.svg' },
     ],
     tools: [
-        {
-            name: 'Git',
-            icon: '/logo/git.png',
-        },
-        {
-            name: 'Docker',
-            icon: '/logo/docker.svg',
-        },
-        {
-            name: 'AWS',
-            icon: '/logo/aws.png',
-        },
+        { name: 'Git', icon: '/logo/git.png' },
+        { name: 'Docker', icon: '/logo/docker.svg' },
+        { name: 'AWS', icon: '/logo/aws.png' },
+        { name: 'GitHub Actions', icon: '/logo/github.png' },
+    ],
+    ai: [
+        { name: 'GPT', icon: '/logo/openai.svg' },
+        { name: 'Gemini', icon: '/logo/gemini.svg' },
+        { name: 'LangChain', icon: '/logo/langchain.svg' },
     ],
 };
 
@@ -286,23 +239,23 @@ export const PROJECTS: IProject[] = [
 
 export const MY_EXPERIENCE = [
     {
-        title: 'Software Engineer (Frontend)',
-        company: 'Strativ AB',
-        duration: 'Dec 2024 - Present',
+        title: 'Naval Software Developer',
+        company: 'Republic of Korea Navy',
+        duration: '2025 - Present',
     },
     {
-        title: 'Frontend Developer',
-        company: 'Epikcoders',
-        duration: 'Oct 2023 - Nov 2024',
+        title: 'Software Engineer',
+        company: 'gazilab',
+        duration: '2023 - 2025',
     },
     {
-        title: 'Frontend Engineer',
-        company: 'Anchorblock Technology',
-        duration: 'Oct 2022 - Sep 2023',
+        title: 'Mobile App Developer',
+        company: 'PAM+NET DApp Project',
+        duration: '2022 - 2023',
     },
     {
-        title: 'Frontend Developer (Part-time)',
-        company: 'Branex IT',
-        duration: 'Jan 2022 - Oct 2022',
+        title: 'Physics, Undergraduate',
+        company: 'POSTECH',
+        duration: '2021 - Present',
     },
 ];
