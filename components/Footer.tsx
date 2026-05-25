@@ -8,7 +8,7 @@ interface RepoStats {
 
 const Footer = async () => {
     const repoStats = await fetch(
-        'https://api.github.com/repos/hothyun/portfolio',
+        'https://api.github.com/repos/Tajmirul/portfolio-2.0',
         {
             next: {
                 revalidate: 60 * 60, // 1 hour
@@ -32,11 +32,12 @@ const Footer = async () => {
 
                 <div className="">
                     <a
-                        href="https://github.com/hothyun"
+                        href="https://github.com/Tajmirul/portfolio-2.0"
                         target="_blank"
                         className="leading-none text-muted-foreground hover:underline hover:text-white"
                     >
-                        Built by HotHyun
+                        Modified by HotHyun<br />
+                        Forked from Tajmirul Islam
                         <div className="flex items-center justify-center gap-5 pt-1">
                             <span className="flex items-center gap-2">
                                 <Star size={18} /> {stargazers_count}
