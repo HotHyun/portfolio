@@ -44,7 +44,7 @@ const Navbar = () => {
                     >
                         <span
                             className={cn(
-                                'absolute left-1 top-1 h-10 w-12 rounded-full bg-foreground shadow-[0_8px_24px_rgba(0,0,0,0.28)] transition-transform duration-500 ease-out',
+                                'pointer-events-none absolute left-1 top-1 h-10 w-12 rounded-full bg-foreground shadow-[0_8px_24px_rgba(0,0,0,0.28)] transition-transform duration-500 ease-out',
                                 language === 'en' && 'translate-x-11',
                             )}
                         ></span>
@@ -58,7 +58,7 @@ const Navbar = () => {
                                     'relative z-[1] h-10 w-12 rounded-full text-xs font-anton uppercase tracking-[0.16em] transition-colors duration-300',
                                     language === item
                                         ? 'text-background'
-                                        : 'text-muted-foreground hover:text-foreground',
+                                        : 'text-foreground/90 hover:text-primary',
                                 )}
                                 aria-pressed={language === item}
                             >

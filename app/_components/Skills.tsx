@@ -23,7 +23,7 @@ const STACK_LABELS = {
         },
     },
     ko: {
-        title: '기술 스택',
+        title: 'My Stack',
         categories: {
             frontend: 'frontend',
             app: 'app',
