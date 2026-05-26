@@ -39,18 +39,26 @@ const Navbar = () => {
             <div className="sticky top-0 z-[4]">
                 <div className="absolute top-5 right-5 md:right-10 z-[2] flex items-center gap-3">
                     <div
-                        className="flex h-9 rounded-full border border-white/15 bg-background/70 p-1 text-xs uppercase text-muted-foreground backdrop-blur"
+                        className="group/language relative h-12 w-[104px] overflow-hidden rounded-full border border-white/10 bg-background/75 p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-md transition-colors hover:border-primary/35"
                         aria-label="Language selector"
                     >
+                        <span
+                            className={cn(
+                                'absolute left-1 top-1 h-10 w-12 rounded-full bg-foreground shadow-[0_8px_24px_rgba(0,0,0,0.28)] transition-transform duration-500 ease-out',
+                                language === 'en' && 'translate-x-11',
+                            )}
+                        ></span>
+                        <span className="pointer-events-none absolute inset-x-3 top-1/2 h-px -translate-y-1/2 bg-white/10"></span>
                         {(['ko', 'en'] as const).map((item) => (
                             <button
                                 key={item}
                                 type="button"
                                 onClick={() => setLanguage(item)}
                                 className={cn(
-                                    'min-w-9 rounded-full px-2 transition-colors',
-                                    language === item &&
-                                        'bg-foreground text-background',
+                                    'relative z-[1] h-10 w-12 rounded-full text-xs font-anton uppercase tracking-[0.16em] transition-colors duration-300',
+                                    language === item
+                                        ? 'text-background'
+                                        : 'text-muted-foreground hover:text-foreground',
                                 )}
                                 aria-pressed={language === item}
                             >
