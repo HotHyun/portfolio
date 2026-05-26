@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Anton, Roboto_Flex } from 'next/font/google';
+import { Anton, Noto_Sans_KR, Roboto_Flex } from 'next/font/google';
 import { ReactLenis } from 'lenis/react';
 
 import 'lenis/dist/lenis.css';
@@ -11,6 +11,7 @@ import Navbar from '@/components/Navbar';
 import CustomCursor from '@/components/CustomCursor';
 import Preloader from '../components/Preloader';
 import StickyEmail from './_components/StickyEmail';
+import { LanguageProvider } from '@/components/LanguageProvider';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import Script from 'next/script';
 
@@ -26,6 +27,12 @@ const robotoFlex = Roboto_Flex({
     style: 'normal',
     subsets: ['latin'],
     variable: '--font-roboto-flex',
+});
+
+const notoSansKr = Noto_Sans_KR({
+    weight: ['300', '400', '500', '700', '800'],
+    subsets: ['latin'],
+    variable: '--font-noto-sans-kr',
 });
 
 export const metadata: Metadata = {
@@ -53,7 +60,7 @@ export default function RootLayout({
             })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
             </Script>
             <body
-                className={`${antonFont.variable} ${robotoFlex.variable} antialiased`}
+                className={`${antonFont.variable} ${robotoFlex.variable} ${notoSansKr.variable} antialiased`}
             >
                 <ReactLenis
                     root
@@ -71,15 +78,17 @@ export default function RootLayout({
                         Frontend dev? I&apos;ll help you polish your resume —
                         completely free.
                     </a> */}
-                    <Navbar />
-                    <main>{children}</main>
-                    <Footer />
+                    <LanguageProvider>
+                        <Navbar />
+                        <main>{children}</main>
+                        <Footer />
 
-                    <CustomCursor />
-                    <Preloader />
-                    <ScrollProgressIndicator />
-                    <ParticleBackground />
-                    <StickyEmail />
+                        <CustomCursor />
+                        <Preloader />
+                        <ScrollProgressIndicator />
+                        <ParticleBackground />
+                        <StickyEmail />
+                    </LanguageProvider>
                 </ReactLenis>
             </body>
         </html>

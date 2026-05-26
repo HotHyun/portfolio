@@ -1,4 +1,5 @@
 'use client';
+import { useLanguage } from '@/components/LanguageProvider';
 import SectionTitle from '@/components/SectionTitle';
 import { MY_EXPERIENCE } from '@/lib/data';
 import { useGSAP } from '@gsap/react';
@@ -8,8 +9,42 @@ import { useRef } from 'react';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
+const COPY = {
+    en: {
+        title: 'My Experience',
+        items: MY_EXPERIENCE,
+    },
+    ko: {
+        title: '경험',
+        items: [
+            {
+                title: '해군 SW 개발병',
+                company: '대한민국 해군',
+                duration: '2025 - 현재',
+            },
+            {
+                title: '소프트웨어 엔지니어',
+                company: 'gazilab',
+                duration: '2023 - 2025',
+            },
+            {
+                title: '모바일 앱 개발자',
+                company: 'PAM+NET DApp Project',
+                duration: '2022 - 2023',
+            },
+            {
+                title: '물리학과 학부생',
+                company: 'POSTECH',
+                duration: '2021 - 현재',
+            },
+        ],
+    },
+};
+
 const Experiences = () => {
     const containerRef = useRef<HTMLDivElement>(null);
+    const { language } = useLanguage();
+    const copy = COPY[language];
 
     useGSAP(
         () => {
@@ -54,10 +89,10 @@ const Experiences = () => {
     return (
         <section className="py-section" id="my-experience">
             <div className="container" ref={containerRef}>
-                <SectionTitle title="My Experience" />
+                <SectionTitle title={copy.title} />
 
                 <div className="grid gap-14">
-                    {MY_EXPERIENCE.map((item) => (
+                    {copy.items.map((item) => (
                         <div key={item.title} className="experience-item">
                             <p className="text-xl text-muted-foreground">
                                 {item.company}

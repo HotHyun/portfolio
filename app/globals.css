@@ -42,7 +42,17 @@
         @apply border-border !cursor-none;
     }
     body {
-        @apply bg-background text-foreground font-roboto-flex;
+        @apply bg-background text-foreground;
+        font-family: var(--font-roboto-flex), sans-serif;
+    }
+
+    body[data-lang='ko'] {
+        font-family: var(--font-noto-sans-kr), var(--font-roboto-flex), sans-serif;
+        word-break: keep-all;
+    }
+
+    body[data-lang='en'] {
+        font-family: var(--font-roboto-flex), sans-serif;
     }
 }
 

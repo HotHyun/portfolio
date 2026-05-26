@@ -1,6 +1,7 @@
 'use client';
 import ArrowAnimation from '@/components/ArrowAnimation';
 import Button from '@/components/Button';
+import { useLanguage } from '@/components/LanguageProvider';
 import { GENERAL_INFO } from '@/lib/data';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
@@ -9,10 +10,44 @@ import React from 'react';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
+const COPY = {
+    en: {
+        titleTop: 'SOFTWARE',
+        titleBottom: 'ENGINEER',
+        intro: (
+            <>
+                Hi! I&apos;m{' '}
+                <span className="font-medium text-foreground">HotHyun</span>. I
+                build full-stack products, AI applications, and automation tools
+                to solve real problems and create positive impact.
+            </>
+        ),
+        button: 'View GitHub',
+        status: 'Currently serving as a Naval Software Developer',
+        stats: ['Years at gazilab', 'Product Areas', 'Physics'],
+    },
+    ko: {
+        titleTop: 'SOFTWARE',
+        titleBottom: 'ENGINEER',
+        intro: (
+            <>
+                안녕하세요.{' '}
+                <span className="font-medium text-foreground">HotHyun</span>
+                입니다. 풀스택 제품, AI 애플리케이션, 자동화 도구를 만들어 실제
+                문제를 해결하고 좋은 영향을 남기는 일을 합니다.
+            </>
+        ),
+        button: 'GitHub 보기',
+        status: '현재 해군 SW 개발병으로 복무 중',
+        stats: ['gazilab 근무', '제품 영역', '물리학'],
+    },
+};
+
 const Banner = () => {
     const containerRef = React.useRef<HTMLDivElement>(null);
+    const { language } = useLanguage();
+    const copy = COPY[language];
 
-    // move the content a little up on scroll
     useGSAP(
         () => {
             const tl = gsap.timeline({
@@ -42,17 +77,11 @@ const Banner = () => {
             >
                 <div className="max-md:grow max-md:flex flex-col justify-center items-start max-w-[620px]">
                     <h1 className="banner-title slide-up-and-fade leading-[.95] text-6xl sm:text-[80px] font-anton">
-                        <span className="text-primary">SOFTWARE</span>
-                        <br /> <span className="ml-4">ENGINEER</span>
+                        <span className="text-primary">{copy.titleTop}</span>
+                        <br /> <span className="ml-4">{copy.titleBottom}</span>
                     </h1>
                     <p className="banner-description slide-up-and-fade mt-6 text-lg text-muted-foreground">
-                        Hi! I&apos;m{' '}
-                        <span className="font-medium text-foreground">
-                            HotHyun
-                        </span>
-                        . I build full-stack products, AI applications, and
-                        automation tools to solve real problems and create
-                        positive impact.
+                        {copy.intro}
                     </p>
                     <Button
                         as="link"
@@ -62,13 +91,13 @@ const Banner = () => {
                         variant="primary"
                         className="mt-9 banner-button slide-up-and-fade"
                     >
-                        View GitHub
+                        {copy.button}
                     </Button>
 
                     <div className="flex items-center gap-2 mt-3">
                         <span className="size-3 rounded-full bg-white"></span>
                         <span className="text-sm text-muted-foreground">
-                            Currently serving as a Naval Software Developer
+                            {copy.status}
                         </span>
                     </div>
                 </div>
@@ -78,23 +107,19 @@ const Banner = () => {
                         <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
                             2+
                         </h5>
-                        <p className="text-muted-foreground">
-                            Years at gazilab
-                        </p>
+                        <p className="text-muted-foreground">{copy.stats[0]}</p>
                     </div>
                     <div className="slide-up-and-fade">
                         <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
                             4
                         </h5>
-                        <p className="text-muted-foreground">
-                            Product Areas
-                        </p>
+                        <p className="text-muted-foreground">{copy.stats[1]}</p>
                     </div>
                     <div className="slide-up-and-fade">
                         <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
                             POSTECH
                         </h5>
-                        <p className="text-muted-foreground">Physics</p>
+                        <p className="text-muted-foreground">{copy.stats[2]}</p>
                     </div>
                 </div>
             </div>

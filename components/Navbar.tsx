@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { MoveUpRight } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { GENERAL_INFO, SOCIAL_LINKS } from '@/lib/data';
+import { useLanguage } from './LanguageProvider';
 
 const COLORS = [
     'bg-yellow-500 text-black',
@@ -12,57 +13,77 @@ const COLORS = [
     'bg-indigo-500 text-white',
 ];
 
-const MENU_LINKS = [
-    {
-        name: 'Home',
-        url: '/',
-    },
-    {
-        name: 'About Me',
-        url: '/#about-me',
-    },
-    {
-        name: 'Experience',
-        url: '/#my-experience',
-    },
-    {
-        name: 'Projects',
-        url: '/#selected-projects',
-    },
-];
+const MENU_LINKS = {
+    en: [
+        { name: 'Home', url: '/' },
+        { name: 'About Me', url: '/#about-me' },
+        { name: 'Experience', url: '/#my-experience' },
+        { name: 'Projects', url: '/#selected-projects' },
+    ],
+    ko: [
+        { name: '홈', url: '/' },
+        { name: '소개', url: '/#about-me' },
+        { name: '경험', url: '/#my-experience' },
+        { name: '프로젝트', url: '/#selected-projects' },
+    ],
+};
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { language, setLanguage } = useLanguage();
     const router = useRouter();
+    const menuLinks = MENU_LINKS[language];
 
     return (
         <>
             <div className="sticky top-0 z-[4]">
-                <button
-                    className={cn(
-                        'group size-12 absolute top-5 right-5 md:right-10 z-[2]',
-                    )}
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                >
-                    <span
-                        className={cn(
-                            'inline-block w-3/5 h-0.5 bg-foreground rounded-full absolute left-1/2 -translate-x-1/2 top-1/2 duration-300 -translate-y-[5px] ',
-                            {
-                                'rotate-45 -translate-y-1/2': isMenuOpen,
-                                'md:group-hover:rotate-12': !isMenuOpen,
-                            },
-                        )}
-                    ></span>
-                    <span
-                        className={cn(
-                            'inline-block w-3/5 h-0.5 bg-foreground rounded-full absolute left-1/2 -translate-x-1/2 top-1/2 duration-300 translate-y-[5px] ',
-                            {
-                                '-rotate-45 -translate-y-1/2': isMenuOpen,
-                                'md:group-hover:-rotate-12': !isMenuOpen,
-                            },
-                        )}
-                    ></span>
-                </button>
+                <div className="absolute top-5 right-5 md:right-10 z-[2] flex items-center gap-3">
+                    <div
+                        className="flex h-9 rounded-full border border-white/15 bg-background/70 p-1 text-xs uppercase text-muted-foreground backdrop-blur"
+                        aria-label="Language selector"
+                    >
+                        {(['ko', 'en'] as const).map((item) => (
+                            <button
+                                key={item}
+                                type="button"
+                                onClick={() => setLanguage(item)}
+                                className={cn(
+                                    'min-w-9 rounded-full px-2 transition-colors',
+                                    language === item &&
+                                        'bg-foreground text-background',
+                                )}
+                                aria-pressed={language === item}
+                            >
+                                {item}
+                            </button>
+                        ))}
+                    </div>
+
+                    <button
+                        aria-label="Open menu"
+                        className={cn('group size-12 relative')}
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    >
+                        <span
+                            className={cn(
+                                'inline-block w-3/5 h-0.5 bg-foreground rounded-full absolute left-1/2 -translate-x-1/2 top-1/2 duration-300 -translate-y-[5px] ',
+                                {
+                                    'rotate-45 -translate-y-1/2': isMenuOpen,
+                                    'md:group-hover:rotate-12': !isMenuOpen,
+                                },
+                            )}
+                        ></span>
+                        <span
+                            className={cn(
+                                'inline-block w-3/5 h-0.5 bg-foreground rounded-full absolute left-1/2 -translate-x-1/2 top-1/2 duration-300 translate-y-[5px] ',
+                                {
+                                    '-rotate-45 -translate-y-1/2': isMenuOpen,
+                                    'md:group-hover:-rotate-12': !isMenuOpen,
+                                },
+                            )}
+                        ></span>
+                    </button>
+                </div>
             </div>
 
             <div
@@ -117,7 +138,7 @@ const Navbar = () => {
                                 MENU
                             </p>
                             <ul className="space-y-3">
-                                {MENU_LINKS.map((link, idx) => (
+                                {menuLinks.map((link, idx) => (
                                     <li key={link.name}>
                                         <button
                                             onClick={() => {
@@ -147,7 +168,9 @@ const Navbar = () => {
                 </div>
 
                 <div className="w-full max-w-[300px] mx-8 sm:mx-auto">
-                    <p className="text-muted-foreground mb-4">GET IN TOUCH</p>
+                    <p className="text-muted-foreground mb-4">
+                        {language === 'ko' ? 'CONTACT' : 'GET IN TOUCH'}
+                    </p>
                     <a href={`mailto:${GENERAL_INFO.email}`}>
                         {GENERAL_INFO.email}
                     </a>
