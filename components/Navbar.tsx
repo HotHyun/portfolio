@@ -39,23 +39,22 @@ const Navbar = () => {
             <div className="sticky top-0 z-[4]">
                 <div className="absolute top-5 right-5 md:right-10 z-[2] flex items-center gap-3">
                     <div
-                        className="group/language relative grid h-12 w-[104px] grid-cols-2 overflow-hidden rounded-full border border-white/10 bg-background/75 p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-md transition-colors hover:border-primary/35"
+                        className="group/language relative flex h-12 w-[104px] items-center overflow-hidden rounded-full border border-white/10 bg-background/75 p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-md transition-colors hover:border-primary/35"
                         aria-label="Language selector"
                     >
                         <span
                             className={cn(
                                 'pointer-events-none absolute left-1 top-1 h-10 w-12 rounded-full bg-foreground shadow-[0_8px_24px_rgba(0,0,0,0.28)] transition-transform duration-500 ease-out',
-                                language === 'en' && 'translate-x-[44px]',
+                                language === 'en' && 'translate-x-12',
                             )}
                         ></span>
-                        <span className="pointer-events-none absolute inset-x-3 top-1/2 h-px -translate-y-1/2 bg-white/10"></span>
                         {(['ko', 'en'] as const).map((item) => (
                             <button
                                 key={item}
                                 type="button"
                                 onClick={() => setLanguage(item)}
                                 className={cn(
-                                    'relative z-[1] flex h-10 w-full items-center justify-center rounded-full text-xs font-anton uppercase tracking-wider transition-colors duration-300',
+                                    'relative z-[1] flex h-10 w-12 shrink-0 items-center justify-center rounded-full text-center text-xs font-anton uppercase tracking-wider transition-colors duration-300',
                                     language === item
                                         ? 'text-background'
                                         : 'text-foreground/90 hover:text-primary',
