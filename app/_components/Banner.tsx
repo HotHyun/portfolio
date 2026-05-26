@@ -23,8 +23,12 @@ const COPY = {
             </>
         ),
         button: 'View GitHub',
-        status: 'Currently serving as a Naval Software Developer',
-        stats: ['Years at gazilab', 'Product Areas', 'Physics'],
+        status: 'Currently serving as a Navy Software Developer',
+        stats: [
+            { value: '4+', label: 'Years as Software Engineer' },
+            { value: '10+', label: 'Software Products' },
+            { value: 'POSTECH', label: 'Physics Student' },
+        ],
     },
     ko: {
         titleTop: 'SOFTWARE',
@@ -39,7 +43,11 @@ const COPY = {
         ),
         button: 'GitHub 보기',
         status: '현재 해군 SW 개발병으로 복무 중',
-        stats: ['gazilab 근무', '제품 영역', '물리학'],
+        stats: [
+            { value: '4+', label: '소프트웨어 엔지니어 경력' },
+            { value: '10+', label: '소프트웨어 개발 참여' },
+            { value: 'POSTECH', label: '물리학과 재학생' },
+        ],
     },
 };
 
@@ -105,21 +113,21 @@ const Banner = () => {
                 <div className="md:absolute bottom-[10%] right-[4%] flex md:flex-col gap-4 md:gap-8 text-center md:text-right">
                     <div className="slide-up-and-fade">
                         <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
-                            2+
+                            {copy.stats[0].value}
                         </h5>
-                        <p className="text-muted-foreground">{copy.stats[0]}</p>
+                        <p className="text-muted-foreground">{copy.stats[0].label}</p>
                     </div>
                     <div className="slide-up-and-fade">
                         <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
-                            4
+                            {copy.stats[1].value}
                         </h5>
-                        <p className="text-muted-foreground">{copy.stats[1]}</p>
+                        <p className="text-muted-foreground">{copy.stats[1].label}</p>
                     </div>
                     <div className="slide-up-and-fade">
                         <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
-                            POSTECH
+                            {copy.stats[2].value}
                         </h5>
-                        <p className="text-muted-foreground">{copy.stats[2]}</p>
+                        <p className="text-muted-foreground">{copy.stats[2].label}</p>
                     </div>
                 </div>
             </div>
