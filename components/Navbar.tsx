@@ -55,7 +55,7 @@ const Navbar = () => {
                                 type="button"
                                 onClick={() => setLanguage(item)}
                                 className={cn(
-                                    'relative z-[1] flex h-10 w-12 items-center justify-center rounded-full text-xs font-anton uppercase tracking-[0.16em] transition-colors duration-300',
+                                    'relative z-[1] flex h-10 w-full items-center justify-center rounded-full text-xs font-anton uppercase tracking-wider transition-colors duration-300',
                                     language === item
                                         ? 'text-background'
                                         : 'text-foreground/90 hover:text-primary',
