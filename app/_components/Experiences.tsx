@@ -15,7 +15,7 @@ const COPY = {
         items: MY_EXPERIENCE,
     },
     ko: {
-        title: '경험',
+        title: 'My Experience',
         items: [
             {
                 title: '해군 SW 개발병',
