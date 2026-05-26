@@ -25,12 +25,12 @@ const STACK_LABELS = {
     ko: {
         title: '기술 스택',
         categories: {
-            frontend: '프론트엔드',
-            app: '앱',
-            backend: '백엔드',
-            database: '데이터베이스',
-            tools: '도구',
-            ai: 'AI',
+            frontend: 'frontend',
+            app: 'app',
+            backend: 'backend',
+            database: 'database',
+            tools: 'tools',
+            ai: 'ai',
         },
     },
 };

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Anton, Noto_Sans_KR, Roboto_Flex } from 'next/font/google';
+import { Anton, Roboto_Flex } from 'next/font/google';
 import { ReactLenis } from 'lenis/react';
 
 import 'lenis/dist/lenis.css';
@@ -29,11 +29,6 @@ const robotoFlex = Roboto_Flex({
     variable: '--font-roboto-flex',
 });
 
-const notoSansKr = Noto_Sans_KR({
-    weight: ['300', '400', '500', '700', '800'],
-    subsets: ['latin'],
-    variable: '--font-noto-sans-kr',
-});
 
 export const metadata: Metadata = {
     title: 'HotHyun - Software Engineer',
@@ -60,7 +55,7 @@ export default function RootLayout({
             })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
             </Script>
             <body
-                className={`${antonFont.variable} ${robotoFlex.variable} ${notoSansKr.variable} antialiased`}
+                className={`${antonFont.variable} ${robotoFlex.variable} antialiased`}
             >
                 <ReactLenis
                     root

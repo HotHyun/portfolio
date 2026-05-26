@@ -87,7 +87,7 @@ const Button = ({
                     {variant !== 'link' && (
                         <span className="absolute top-[200%] left-0 right-0 h-full bg-white rounded-[50%] group-hover:top-0 transition-all duration-500 scale-150"></span>
                     )}
-                    <span className="z-[1]">
+                    <span className="z-[1] inline-flex items-center justify-center gap-2">
                         {loading ? <Child icon={icon} /> : children}
                     </span>
                 </a>
@@ -99,7 +99,7 @@ const Button = ({
                 {variant !== 'link' && (
                     <span className="absolute top-[200%] left-0 right-0 h-full bg-white rounded-[50%] group-hover:top-0 transition-all duration-500 scale-150"></span>
                 )}
-                <span className="z-[1]">
+                <span className="z-[1] inline-flex items-center justify-center gap-2">
                     {loading ? <Child icon={icon} /> : children}
                 </span>
             </Link>
@@ -112,7 +112,7 @@ const Button = ({
                 {variant !== 'link' && (
                     <span className="absolute top-[200%] left-0 right-0 h-full bg-white rounded-[50%] group-hover:top-0 transition-all duration-500 scale-150"></span>
                 )}
-                <span className="z-[1]">
+                <span className="z-[1] inline-flex items-center justify-center gap-2">
                     {loading ? <Child icon={icon} /> : children}
                 </span>
             </button>
