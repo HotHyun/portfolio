@@ -6,6 +6,7 @@ import { GENERAL_INFO } from '@/lib/data';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
+import { ArrowUpRight } from 'lucide-react';
 import React from 'react';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -22,7 +23,8 @@ const COPY = {
                 to solve real problems and create positive impact.
             </>
         ),
-        button: 'View GitHub',
+        button: "Let's Talk",
+        resume: 'Resume',
         status: 'Currently serving as a Navy Software Developer',
         stats: [
             { value: '4+', label: 'Years as Software Engineer' },
@@ -41,7 +43,8 @@ const COPY = {
                 문제를 해결하고 좋은 영향을 남기는 일을 합니다.
             </>
         ),
-        button: 'GitHub 보기',
+        button: "Let's Talk",
+        resume: 'Resume',
         status: '현재 해군 SW 개발병으로 복무 중',
         stats: [
             { value: '4+', label: '소프트웨어 엔지니어 경력' },
@@ -91,16 +94,26 @@ const Banner = () => {
                     <p className="banner-description slide-up-and-fade mt-6 text-lg text-muted-foreground">
                         {copy.intro}
                     </p>
-                    <Button
-                        as="link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={GENERAL_INFO.githubProfile}
-                        variant="primary"
-                        className="mt-9 banner-button slide-up-and-fade"
-                    >
-                        {copy.button}
-                    </Button>
+                    <div className="mt-9 flex flex-wrap items-center gap-3 slide-up-and-fade">
+                        <Button
+                            as="link"
+                            href={`mailto:${GENERAL_INFO.email}`}
+                            variant="primary"
+                            className="banner-button"
+                        >
+                            {copy.button}
+                        </Button>
+                        <Button
+                            as="link"
+                            href="/resume.pdf"
+                            download
+                            variant="no-color"
+                            className="border border-white/15 bg-background-light/70 text-foreground hover:border-primary/50 hover:bg-background-light"
+                        >
+                            <span>{copy.resume}</span>
+                            <ArrowUpRight size={18} strokeWidth={1.8} />
+                        </Button>
+                    </div>
 
                     <div className="flex items-center gap-2 mt-3">
                         <span className="size-3 rounded-full bg-white"></span>
