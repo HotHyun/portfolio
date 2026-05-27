@@ -28,7 +28,7 @@ export const MY_STACK = {
         { name: 'React', icon: '/logo/react.png' },
         { name: 'Next.js', icon: '/logo/next.png' },
         { name: 'Tailwind CSS', icon: '/logo/tailwind.png' },
-        { name: 'Framer Motion', icon: '/logo/framer-motion.png' },
+        { name: 'Zustand', icon: '/logo/zustand.svg' },
     ],
     app: [
         { name: 'React Native', icon: '/logo/react.png' },
@@ -39,24 +39,31 @@ export const MY_STACK = {
     backend: [
         { name: 'Node.js', icon: '/logo/node.png' },
         { name: 'Express.js', icon: '/logo/express.png' },
+        { name: 'NestJS', icon: '/logo/nest.svg' },
         { name: 'Spring Boot', icon: '/logo/spring.svg' },
+        { name: 'Kotlin + Spring', icon: '/logo/kotlin-spring.svg' },
         { name: 'FastAPI', icon: '/logo/fastapi.svg' },
     ],
     database: [
         { name: 'PostgreSQL', icon: '/logo/postgreSQL.png' },
         { name: 'Oracle SQL', icon: '/logo/oracle.svg' },
         { name: 'Firebase', icon: '/logo/firebase.svg' },
+        { name: 'Pinecone', icon: '/logo/pinecone.svg' },
+        { name: 'Qdrant', icon: '/logo/qdrant.svg' },
+        { name: 'Prisma', icon: '/logo/prisma.png' },
     ],
     tools: [
         { name: 'Git', icon: '/logo/git.png' },
         { name: 'Docker', icon: '/logo/docker.svg' },
-        { name: 'AWS', icon: '/logo/aws.png' },
-        { name: 'GitHub Actions', icon: '/logo/github.png' },
+        { name: 'GitHub Actions', icon: '/logo/github-actions.svg' },
+        { name: 'Oracle Cloud', icon: '/logo/oracle.svg' },
+        { name: 'Appwrite', icon: '/logo/appwrite.svg' },
+        { name: 'Umami', icon: '/logo/umami.svg' },
     ],
     ai: [
-        { name: 'GPT', icon: '/logo/openai.svg' },
-        { name: 'Gemini', icon: '/logo/gemini.svg' },
         { name: 'LangChain', icon: '/logo/langchain.svg' },
+        { name: 'OpenCode', icon: '/logo/opencode.svg' },
+        { name: 'Codex', icon: '/logo/openai.svg' },
     ],
 };
 
