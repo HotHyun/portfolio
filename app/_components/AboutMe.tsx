@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 const COPY = {
     en: {
         headline:
-            'I like forming hypotheses about problems, validating them through Pretotyping and MVP development, and refining them into products that users truly need.',
+            'I turn problem hypotheses into testable MVPs, then refine them into products users actually need.',
         label: 'This is me.',
         greeting: "Hi, I'm HotHyun.",
         paragraphs: [
@@ -20,7 +20,7 @@ const COPY = {
     },
     ko: {
         headline:
-            '저는 문제에 대한 가설을 세우고, 그 가설을 Pretotyping과 MVP를 개발하여 검증하고 고도화하여 사용자들에게 더 필요한 제품을 만드는 것을 좋아합니다.',
+            '가설을 검증 가능한 MVP로 만들고, 사용자에게 필요한 제품으로 발전시킵니다.',
         label: 'This is me.',
         greeting: '안녕하세요, HotHyun입니다.',
         paragraphs: [
