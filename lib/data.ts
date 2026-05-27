@@ -245,7 +245,7 @@ export const PROJECTS: IProject[] = [
 
 export const MY_EXPERIENCE = [
     {
-        title: 'Naval Software Developer',
+        title: 'Navy Software Developer',
         company: 'Republic of Korea Navy',
         duration: '2025 - Present',
     },

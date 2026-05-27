@@ -15,7 +15,7 @@ const COPY = {
         greeting: "Hi, I'm HotHyun.",
         paragraphs: [
             'Hello, I am HotHyun, a software engineer who wants to create positive impact. There are many ways to do that, but building software products that solve problems in specific communities feels like the path that fits me best.',
-            'I am currently serving as a Naval Software Developer. Previously, I worked for two years as a Software Engineer at early-stage startup gazilab, where I built and launched multiple products. I started by quickly building early products and learning from user feedback, then took ownership of improving their structure and gained experience across the full product development process.',
+            'I am currently serving as a Navy Software Developer. Previously, I worked for two years as a Software Engineer at early-stage startup gazilab, where I built and launched multiple products. I started by quickly building early products and learning from user feedback, then took ownership of improving their structure and gained experience across the full product development process.',
         ],
     },
     ko: {

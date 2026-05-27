@@ -23,7 +23,7 @@ const COPY = {
                 duration: '2025 - 현재',
             },
             {
-                title: '소프트웨어 엔지니어',
+                title: 'Software Engineer',
                 company: 'gazilab',
                 duration: '2023 - 2025',
             },
