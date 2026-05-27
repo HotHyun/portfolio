@@ -105,8 +105,8 @@ const Navbar = () => {
 
             <div
                 className={cn(
-                    'fixed top-0 right-0 h-[100dvh] w-[500px] max-w-[calc(100vw-3rem)] transform translate-x-full transition-transform duration-700 z-[3] overflow-hidden gap-y-14',
-                    'flex flex-col lg:justify-center py-10',
+                    'fixed top-0 right-0 h-[100dvh] w-[500px] max-w-[calc(100vw-3rem)] transform translate-x-full transition-transform duration-700 z-[3] overflow-hidden',
+                    'flex flex-col lg:justify-center',
                     { 'translate-x-0': isMenuOpen },
                 )}
             >
@@ -119,100 +119,102 @@ const Navbar = () => {
                     )}
                 ></div>
 
-                <div className="grow flex md:items-center w-full max-w-[300px] mx-8 sm:mx-auto">
-                    <div className="flex gap-10 lg:justify-between max-lg:flex-col w-full">
-                        <div className="md:hidden">
-                            <p className="text-muted-foreground mb-5">
-                                LANGUAGE
-                            </p>
-                            <div
-                                className="relative flex h-12 w-[104px] items-center overflow-hidden rounded-full border border-white/10 bg-background/75 p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"
-                                aria-label="Language selector"
-                            >
-                                <span
-                                    className={cn(
-                                        'pointer-events-none absolute left-1 top-1 h-10 w-12 rounded-full bg-foreground shadow-[0_8px_24px_rgba(0,0,0,0.28)] transition-transform duration-500 ease-out',
-                                        language === 'en' && 'translate-x-12',
-                                    )}
-                                ></span>
-                                {(['ko', 'en'] as const).map((item) => (
-                                    <button
-                                        key={item}
-                                        type="button"
-                                        onClick={() => setLanguage(item)}
+                <div className="flex min-h-0 flex-1 flex-col gap-y-14 overflow-y-auto overscroll-contain py-10">
+                    <div className="grow flex md:items-center w-full max-w-[300px] mx-8 sm:mx-auto">
+                        <div className="flex gap-10 lg:justify-between max-lg:flex-col w-full">
+                            <div className="md:hidden">
+                                <p className="text-muted-foreground mb-5">
+                                    LANGUAGE
+                                </p>
+                                <div
+                                    className="relative flex h-12 w-[104px] items-center overflow-hidden rounded-full border border-white/10 bg-background/75 p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"
+                                    aria-label="Language selector"
+                                >
+                                    <span
                                         className={cn(
-                                            'relative z-[1] flex h-10 w-12 shrink-0 items-center justify-center rounded-full text-center text-xs font-anton uppercase leading-none tracking-wider transition-colors duration-300',
-                                            language === item
-                                                ? 'text-background'
-                                                : 'text-foreground/90 hover:text-primary',
+                                            'pointer-events-none absolute left-1 top-1 h-10 w-12 rounded-full bg-foreground shadow-[0_8px_24px_rgba(0,0,0,0.28)] transition-transform duration-500 ease-out',
+                                            language === 'en' && 'translate-x-12',
                                         )}
-                                        aria-pressed={language === item}
-                                    >
-                                        {item}
-                                    </button>
-                                ))}
+                                    ></span>
+                                    {(['ko', 'en'] as const).map((item) => (
+                                        <button
+                                            key={item}
+                                            type="button"
+                                            onClick={() => setLanguage(item)}
+                                            className={cn(
+                                                'relative z-[1] flex h-10 w-12 shrink-0 items-center justify-center rounded-full text-center text-xs font-anton uppercase leading-none tracking-wider transition-colors duration-300',
+                                                language === item
+                                                    ? 'text-background'
+                                                    : 'text-foreground/90 hover:text-primary',
+                                            )}
+                                            aria-pressed={language === item}
+                                        >
+                                            {item}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="max-lg:order-2">
+                                <p className="text-muted-foreground mb-5 md:mb-8">
+                                    SOCIAL
+                                </p>
+                                <ul className="space-y-3">
+                                    {SOCIAL_LINKS.map((link) => (
+                                        <li key={link.name}>
+                                            <a
+                                                href={link.url}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                className="text-lg capitalize hover:underline"
+                                            >
+                                                {link.name}
+                                            </a>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div className="">
+                                <p className="text-muted-foreground mb-5 md:mb-8">
+                                    MENU
+                                </p>
+                                <ul className="space-y-3">
+                                    {menuLinks.map((link, idx) => (
+                                        <li key={link.name}>
+                                            <button
+                                                onClick={() => {
+                                                    router.push(link.url);
+                                                    setIsMenuOpen(false);
+                                                }}
+                                                className="group text-xl flex items-center gap-3"
+                                            >
+                                                <span
+                                                    className={cn(
+                                                        'size-3.5 bg-white/20 rounded-full flex items-center justify-center group-hover:scale-[200%] transition-all',
+                                                        COLORS[idx],
+                                                    )}
+                                                >
+                                                    <MoveUpRight
+                                                        size={8}
+                                                        className="scale-0 group-hover:scale-100 transition-all"
+                                                    />
+                                                </span>
+                                                {link.name}
+                                            </button>
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
                         </div>
-                        <div className="max-lg:order-2">
-                            <p className="text-muted-foreground mb-5 md:mb-8">
-                                SOCIAL
-                            </p>
-                            <ul className="space-y-3">
-                                {SOCIAL_LINKS.map((link) => (
-                                    <li key={link.name}>
-                                        <a
-                                            href={link.url}
-                                            target="_blank"
-                                            rel="noreferrer"
-                                            className="text-lg capitalize hover:underline"
-                                        >
-                                            {link.name}
-                                        </a>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div className="">
-                            <p className="text-muted-foreground mb-5 md:mb-8">
-                                MENU
-                            </p>
-                            <ul className="space-y-3">
-                                {menuLinks.map((link, idx) => (
-                                    <li key={link.name}>
-                                        <button
-                                            onClick={() => {
-                                                router.push(link.url);
-                                                setIsMenuOpen(false);
-                                            }}
-                                            className="group text-xl flex items-center gap-3"
-                                        >
-                                            <span
-                                                className={cn(
-                                                    'size-3.5 bg-white/20 rounded-full flex items-center justify-center group-hover:scale-[200%] transition-all',
-                                                    COLORS[idx],
-                                                )}
-                                            >
-                                                <MoveUpRight
-                                                    size={8}
-                                                    className="scale-0 group-hover:scale-100 transition-all"
-                                                />
-                                            </span>
-                                            {link.name}
-                                        </button>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
                     </div>
-                </div>
 
-                <div className="w-full max-w-[300px] mx-8 sm:mx-auto">
-                    <p className="text-muted-foreground mb-4">
-                        {language === 'ko' ? 'CONTACT' : 'GET IN TOUCH'}
-                    </p>
-                    <a href={`mailto:${GENERAL_INFO.email}`}>
-                        {GENERAL_INFO.email}
-                    </a>
+                    <div className="w-full max-w-[300px] mx-8 sm:mx-auto">
+                        <p className="text-muted-foreground mb-4">
+                            {language === 'ko' ? 'CONTACT' : 'GET IN TOUCH'}
+                        </p>
+                        <a href={`mailto:${GENERAL_INFO.email}`}>
+                            {GENERAL_INFO.email}
+                        </a>
+                    </div>
                 </div>
             </div>
         </>
