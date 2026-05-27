@@ -15,7 +15,7 @@ const COPY = {
         greeting: "Hi, I'm HotHyun.",
         paragraphs: [
             'Hello, I am HotHyun, a software engineer who wants to create positive impact. There are many ways to do that, but building software products that solve problems in specific communities feels like the path that fits me best.',
-            'I am currently serving as a Naval Software Developer. Previously, I worked for two years as a Software Engineer at early-stage startup gazilab, where I built and launched multiple products. I started by quickly building early products and learning from user feedback, then moved into improving their structure so they could operate and scale more reliably.',
+            'I am currently serving as a Naval Software Developer. Previously, I worked for two years as a Software Engineer at early-stage startup gazilab, where I built and launched multiple products. I started by quickly building early products and learning from user feedback, then took ownership of improving their structure and gained experience across the full product development process.',
         ],
     },
     ko: {
@@ -25,7 +25,7 @@ const COPY = {
         greeting: '안녕하세요, HotHyun입니다.',
         paragraphs: [
             '안녕하세요! Software Engineer HotHyun입니다. 저는 누군가에게 선한 영향력을 주고 싶은 사람입니다. 소프트웨어 제품을 만들어 특정 사회의 문제를 해결하는 일이 저와 가장 잘 맞는 방식이라고 생각합니다.',
-            '현재 해군 SW 개발병으로 군 복무 중이며, 이전에는 초기 스타트업 gazilab에서 2년간 Software Engineer로 여러 제품을 개발하고 런칭했습니다. 초기 제품을 빠르게 만들고 사용자 반응을 확인하는 일에서 시작해, 이후 제품이 안정적으로 운영되고 확장될 수 있도록 구조를 개선하는 일까지 맡았습니다.',
+            '현재 해군 SW 개발병으로 군 복무 중이며, 이전에는 초기 스타트업 gazilab에서 2년간 Software Engineer로 여러 제품을 개발하고 런칭했습니다. 초기 제품을 빠르게 만들고 사용자 반응을 확인하는 일에서 시작해, 이후 제품이 안정적으로 운영되고 확장될 수 있도록 구조를 개선하는 일까지 도맡아 제품 전반의 개발을 경험해보았습니다.',
         ],
     },
 };
