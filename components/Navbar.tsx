@@ -39,13 +39,13 @@ const Navbar = () => {
             <div className="sticky top-0 z-[4]">
                 <div className="absolute top-5 right-5 md:right-10 z-[2] flex items-center gap-3">
                     <div
-                        className="group/language relative flex h-12 w-[104px] items-center overflow-hidden rounded-full border border-white/10 bg-background/75 p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-md transition-colors hover:border-primary/35"
+                        className="group/language relative flex h-10 w-[88px] items-center overflow-hidden rounded-full border border-white/10 bg-background/75 p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-md transition-colors hover:border-primary/35 md:h-12 md:w-[104px]"
                         aria-label="Language selector"
                     >
                         <span
                             className={cn(
-                                'pointer-events-none absolute left-1 top-1 h-10 w-12 rounded-full bg-foreground shadow-[0_8px_24px_rgba(0,0,0,0.28)] transition-transform duration-500 ease-out',
-                                language === 'en' && 'translate-x-12',
+                                'pointer-events-none absolute left-1 top-1 h-8 w-10 rounded-full bg-foreground shadow-[0_8px_24px_rgba(0,0,0,0.28)] transition-transform duration-500 ease-out md:h-10 md:w-12',
+                                language === 'en' && 'translate-x-10 md:translate-x-12',
                             )}
                         ></span>
                         {(['ko', 'en'] as const).map((item) => (
@@ -54,7 +54,7 @@ const Navbar = () => {
                                 type="button"
                                 onClick={() => setLanguage(item)}
                                 className={cn(
-                                    'relative z-[1] flex h-10 w-12 shrink-0 items-center justify-center rounded-full text-center text-xs font-anton uppercase tracking-wider transition-colors duration-300',
+                                    'relative z-[1] flex h-8 w-10 shrink-0 items-center justify-center rounded-full text-center text-[11px] font-anton uppercase leading-none tracking-wider transition-colors duration-300 md:h-10 md:w-12 md:text-xs',
                                     language === item
                                         ? 'text-background'
                                         : 'text-foreground/90 hover:text-primary',
@@ -68,7 +68,7 @@ const Navbar = () => {
 
                     <button
                         aria-label="Open menu"
-                        className={cn('group size-12 relative')}
+                        className={cn('group size-10 relative md:size-12')}
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
                         <span
