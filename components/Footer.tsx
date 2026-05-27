@@ -11,12 +11,12 @@ interface RepoStats {
 
 const COPY = {
     en: {
-        cta: "Let\'s build useful software.",
+        cta: "Let's build products people truly need.",
         modified: 'Modified by HotHyun',
         forked: 'Forked from Tajmirul Islam',
     },
     ko: {
-        cta: '쓸모 있는 소프트웨어를 함께 만들어봅시다.',
+        cta: '정말로 필요한 제품을 함께 만들어봅시다.',
         modified: 'Modified by HotHyun',
         forked: 'Forked from Tajmirul Islam',
     },
