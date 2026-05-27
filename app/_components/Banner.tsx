@@ -115,7 +115,7 @@ const Banner = () => {
                         </Button>
                     </div>
 
-                    <div className="flex items-center gap-2 mt-3">
+                    <div className="slide-up-and-fade flex items-center gap-2 mt-3">
                         <span className="size-3 rounded-full bg-white"></span>
                         <span className="text-sm text-muted-foreground">
                             {copy.status}
