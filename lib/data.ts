@@ -19,7 +19,6 @@ export const SOCIAL_LINKS = [
     { name: 'github', url: GENERAL_INFO.githubProfile },
     { name: 'instagram', url: GENERAL_INFO.instagramProfile },
     { name: 'blog', url: GENERAL_INFO.blog },
-    { name: 'Old Version', url: GENERAL_INFO.oldPortfolio },
 ];
 
 export const MY_STACK = {
