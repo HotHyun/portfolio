@@ -28,12 +28,12 @@ const COPY = {
                 duration: '2023 - 2025',
             },
             {
-                title: '모바일 앱 개발자',
+                title: 'Mobile App Developer',
                 company: 'PAM+NET DApp Project',
                 duration: '2022 - 2023',
             },
             {
-                title: '물리학과 학부생',
+                title: 'Physics Undergraduate',
                 company: 'POSTECH',
                 duration: '2021 - 현재',
             },
