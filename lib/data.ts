@@ -41,7 +41,7 @@ export const MY_STACK = {
         { name: 'Express.js', icon: '/logo/express.png' },
         { name: 'NestJS', icon: '/logo/nest.svg' },
         { name: 'Spring Boot', icon: '/logo/spring.svg' },
-        { name: 'Kotlin + Spring', icon: '/logo/kotlin-spring.svg' },
+        { name: 'Kotlin + Spring', icon: '/logo/kotlin.svg' },
         { name: 'FastAPI', icon: '/logo/fastapi.svg' },
     ],
     database: [
