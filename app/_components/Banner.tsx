@@ -19,8 +19,8 @@ const COPY = {
             <>
                 Hi! I&apos;m{' '}
                 <span className="font-medium text-foreground">HotHyun</span>. I
-                build full-stack products, AI applications, and automation tools
-                to solve real problems and create positive impact.
+                identify problems faced by specific people and build software to
+                solve them, creating positive impact through my work.
             </>
         ),
         button: "Let's Talk",
@@ -37,10 +37,10 @@ const COPY = {
         titleBottom: 'ENGINEER',
         intro: (
             <>
-                안녕하세요.{' '}
+                안녕하세요{' '}
                 <span className="font-medium text-foreground">HotHyun</span>
-                입니다. 풀스택 제품, AI 애플리케이션, 자동화 도구를 만들어 실제
-                문제를 해결하고 좋은 영향을 남기는 일을 합니다.
+                입니다. 특정 사람들이 겪는 문제를 파악하고, 이를 해결하기 위한
+                Software를 만들어 좋은 영향을 남기는 일을 합니다.
             </>
         ),
         button: "Let's Talk",
