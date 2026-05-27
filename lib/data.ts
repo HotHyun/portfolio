@@ -63,7 +63,7 @@ export const MY_STACK = {
     ai: [
         { name: 'LangChain', icon: '/logo/langchain.svg' },
         { name: 'OpenCode', icon: '/logo/opencode.svg' },
-        { name: 'Codex', icon: '/logo/openai.svg' },
+        { name: 'Codex', icon: '/logo/codex.svg' },
     ],
 };
 
