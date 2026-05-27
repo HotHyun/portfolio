@@ -20,7 +20,7 @@ const COPY = {
     },
     ko: {
         headline:
-            '가설을 검증 가능한 MVP로 만들고, 사용자에게 필요한 제품으로 발전시킵니다.',
+            '가설 검증이 가능한 MVP를 만들고, 사용자에게 필요한 제품으로 발전시킵니다.',
         label: 'This is me.',
         greeting: '안녕하세요, HotHyun입니다.',
         paragraphs: [
