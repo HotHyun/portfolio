@@ -104,7 +104,7 @@ const Banner = () => {
                         </Button>
                         <Button
                             as="link"
-                            href="/resume.pdf"
+                            href={language === 'en' ? '/resume-en.pdf' : '/resume.pdf'}
                             download
                             variant="no-color"
                             className="border border-white/15 bg-background-light/70 text-foreground hover:border-primary/50 hover:text-background"

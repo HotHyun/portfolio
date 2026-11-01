@@ -23,24 +23,19 @@ export const SOCIAL_LINKS = [
     { name: 'blog', url: GENERAL_INFO.blog },
 ];
 
-type StackItem = {
-    name: string;
-    icon: string;
-    iconWidth?: number;
-    iconHeight?: number;
-};
+type StackItem = { name: string; icon?: string };
 
 export const MY_STACK: Record<string, StackItem[]> = {
     web: [
         { name: 'React', icon: '/logo/react.png' },
         { name: 'Next.js', icon: '/logo/next.png' },
         { name: 'TypeScript', icon: '/logo/ts.png' },
-        { name: 'Recoil', icon: '/logo/recoil.svg' },
+        { name: 'Recoil' },
         { name: 'Zustand', icon: '/logo/zustand.svg' },
-        { name: 'TanStack Query', icon: '/logo/tanstack-query.svg' },
-        { name: 'shadcn/ui', icon: '/logo/shadcn-ui.svg' },
-        { name: 'MUI', icon: '/logo/mui.svg' },
-        { name: 'Ant Design', icon: '/logo/ant-design.svg' },
+        { name: 'TanStack Query' },
+        { name: 'shadcn/ui' },
+        { name: 'MUI' },
+        { name: 'Ant Design' },
         { name: 'Tailwind CSS', icon: '/logo/tailwind.png' },
     ],
     mobile: [
@@ -60,27 +55,17 @@ export const MY_STACK: Record<string, StackItem[]> = {
     ],
     aiProduct: [
         { name: 'LangChain', icon: '/logo/langchain.svg' },
-        { name: 'RAG', icon: '/logo/rag.svg' },
-        {
-            name: 'HyperCLOVA X',
-            icon: '/logo/hyperclova-x.svg',
-            iconWidth: 160,
-            iconHeight: 20,
-        },
+        { name: 'RAG' },
+        { name: 'HyperCLOVA X' },
     ],
     developmentDeployment: [
         { name: 'Git', icon: '/logo/git.png' },
         { name: 'Docker', icon: '/logo/docker.svg' },
         { name: 'GitHub Actions', icon: '/logo/github-actions.svg' },
         { name: 'Oracle Cloud', icon: '/logo/oracle.svg' },
-        {
-            name: 'NCP',
-            icon: '/logo/naver-cloud-platform.png',
-            iconWidth: 76,
-            iconHeight: 36,
-        },
-        { name: 'Cloudflare', icon: '/logo/cloudflare.svg' },
-        { name: 'Vercel', icon: '/logo/vercel.svg' },
+        { name: 'NCP' },
+        { name: 'Cloudflare' },
+        { name: 'Vercel' },
     ],
 };
 

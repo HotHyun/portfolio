@@ -103,13 +103,15 @@ const Skills = () => {
                                         className="slide-up flex gap-3.5 items-center leading-none"
                                         key={item.name}
                                     >
-                                        <Image
-                                            src={item.icon}
-                                            alt={item.name}
-                                            width={item.iconWidth ?? 40}
-                                            height={item.iconHeight ?? 40}
-                                            className="max-h-10 max-w-[160px] w-auto object-contain"
-                                        />
+                                        {item.icon && (
+                                            <Image
+                                                src={item.icon}
+                                                alt={item.name}
+                                                width="40"
+                                                height="40"
+                                                className="max-h-10"
+                                            />
+                                        )}
                                         <span className="text-2xl">
                                             {item.name}
                                         </span>
