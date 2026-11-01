@@ -11,7 +11,7 @@ export const GENERAL_INFO = {
 
     oldPortfolio: 'https://portfolio.hothyun.com',
     githubProfile: 'https://github.com/hothyun',
-    linkedinProfile: 'https://www.linkedin.com/in/상현-신-8b2301267',
+    linkedinProfile: 'https://linkedin.com/in/hothyun',
     instagramProfile: 'https://instagram.com/hot._.hyun',
     blog: 'https://blog.hothyun.com',
 };
