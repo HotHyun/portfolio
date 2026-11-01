@@ -74,8 +74,8 @@ export const PROJECTS: IProject[] = [
         title: localized('Career Wellness', 'Career Wellness'),
         slug: 'career-wellness',
         summary: localized(
-            '첫 기획부터 함께 만든 커리어 진단·회고·상담 서비스입니다. 웹·앱 핵심 기능과 결제 흐름을 구현했으며 현재 운영 중입니다.',
-            'A career assessment, reflection, and coaching service built from initial planning. I shipped core web and app features and its payment flow; the service is still live.',
+            'Career Wellness의 첫 기획부터 제품 개발에 참여해 웹·앱 핵심 기능과 결제 흐름을 구현했습니다. 서비스는 현재도 운영 중입니다.',
+            'I contributed from initial planning through launch, implementing many core web and app features and its payment flow. The service remains live.',
         ),
         overview: localized(
             '일과 커리어를 돌아보고 다음 선택을 준비할 수 있도록 진단, 회고, 1:1 세션과 커뮤니티 진입을 제공하는 서비스입니다.',
@@ -83,14 +83,14 @@ export const PROJECTS: IProject[] = [
         ),
         contributions: {
             ko: [
-                '동료 개발자 1명과 첫 기획부터 MVP 출시까지 함께했고, 웹과 앱의 핵심 기능을 다수 구현했습니다.',
+                '초기 기획부터 MVP 출시까지 참여했고, 웹과 앱의 핵심 기능을 다수 구현했습니다.',
                 '일잼 진단, 이직 진단, 1:1 커리어 세션, 커뮤니티 진입 등 공개 웹 기능과 앱의 주요 사용자 흐름을 개발했습니다.',
                 '7점 척도, 단일·다중 선택, 주관식 문항을 유연하게 추가할 수 있도록 진단 플로우를 모듈화하고 상태 관리부터 결과 분석·공유까지 구현했습니다.',
                 '웹·앱·AI 서버 모노레포를 구성하고 WebView와 공통 모듈을 활용했습니다. GitHub Actions에서 변경된 코드에 따라 배포 대상을 나누도록 만들었습니다.',
                 '회고 기능의 AI 성과 카드 생성 파이프라인과 인증·푸시 알림을 개발했습니다.',
             ],
             en: [
-                'Worked with one other engineer from initial product planning through MVP launch, implementing many of the core web and app features.',
+                'Contributed from initial product planning through MVP launch, implementing many of the core web and app features.',
                 'Built public web flows for work-style and career-change assessments, one-to-one career sessions, and community entry, along with key app journeys.',
                 'Modularized assessments to support 7-point scales, single- and multiple-choice, and open responses; implemented state management, result analysis, and sharing.',
                 'Structured a monorepo for web, app, and AI services, reused client modules through WebView, and configured GitHub Actions to deploy only affected apps.',

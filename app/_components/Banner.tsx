@@ -27,9 +27,9 @@ const COPY = {
         resume: 'Resume',
         status: 'Currently serving as a Navy SW Developer',
         stats: [
-            { value: '4+', label: 'Years building software' },
+            { value: '4+ Years', label: 'Building software' },
             { value: '0→1', label: 'MVPs from first idea' },
-            { value: 'TOP 3', label: '2023 NAVER AI RUSH' },
+            { value: '10+', label: 'Products built' },
         ],
     },
     ko: {
@@ -46,9 +46,9 @@ const COPY = {
         resume: 'Resume',
         status: '현재 해군 SW 개발병으로 복무 중',
         stats: [
-            { value: '4+', label: '소프트웨어를 만든 시간' },
+            { value: '4년+', label: '소프트웨어 개발 경험' },
             { value: '0→1', label: '아이디어에서 MVP까지' },
-            { value: 'TOP 3', label: '2023 NAVER AI RUSH' },
+            { value: '10+', label: '개발한 제품' },
         ],
     },
 };

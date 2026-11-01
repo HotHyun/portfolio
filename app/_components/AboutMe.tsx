@@ -9,23 +9,27 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const COPY = {
     en: {
+        label: 'Introduction',
         headline:
-            'I turn early product ideas into working web and mobile MVPs.',
-        label: 'This is me.',
-        greeting: "Hi, I'm HotHyun.",
-        paragraphs: [
-            'After studying physics, I was drawn to startups and the work of making products. I enjoy taking an early idea and turning it into a working web or app MVP, collaborating across product planning and engineering.',
-            'I am currently serving as a Navy SW Developer. Before that, I worked at the early-stage startup gazilab, building web, mobile, and AI products. I helped create Career Wellness from its first planning sessions through launch, implemented many of its core features alongside another engineer, and connected the payment flow. The service is still operating. I also proposed the AI RUSH project and built its Career AI product from concept to completion as the sole developer; it was selected among the final three companies at 2023 NAVER AI RUSH and presented by our CEO at DAN23.',
+            'React · Next.js · React Native | From early product ideas to MVPs',
+        introduction:
+            'While studying physics, I became interested in startups and product development and began learning to code. In startup teams, I have built products with React/Next.js and React Native, turning early ideas and requirements into working web and app MVPs.',
+        highlights: [
+            'I contributed to Career Wellness from initial planning, implemented many core features, and launched it with real paid transactions. The service is still operating.',
+            'I have worked across user flows and feature design, web and app development, shared modules, and deployment foundations for early products.',
+            'I led development of a career AI product that was selected among the final three companies in 2023 NAVER AI RUSH. The opportunity to present it at DAN23 helped raise the company’s profile and contributed to NAVER marketing opportunities and follow-on collaborations.',
         ],
     },
     ko: {
+        label: '소개',
         headline:
-            '초기 아이디어를 실제 동작하는 웹·앱 MVP로 구현합니다.',
-        label: 'This is me.',
-        greeting: '안녕하세요, HotHyun입니다.',
-        paragraphs: [
-            '물리학을 공부하다 창업과 제품 개발에 끌려 개발을 시작했습니다. 저는 초기 아이디어를 실제로 동작하는 웹·앱 MVP로 구체화하고, 기획과 개발을 오가며 제품의 첫 버전을 만드는 Product Engineer입니다.',
-            '현재 해군 SW 개발병으로 복무 중입니다. 이전에는 초기 스타트업 가지랩에서 웹·앱·AI 제품을 만들었습니다. Career Wellness는 동료 개발자와 첫 기획부터 출시까지 함께했고, 주요 기능을 다수 구현해 결제 파이프라인을 갖춘 서비스로 출시했습니다. 서비스는 지금도 운영 중입니다. 또 AI RUSH 참가를 대표에게 직접 제안했고, Career AI 제품을 기획부터 완성까지 단독 개발해 2023 NAVER AI RUSH 최종 3개 기업에 선정됐습니다. DAN23에서는 대표가 제품을 발표했습니다.',
+            'React · Next.js · React Native | 초기 제품 기획부터 MVP 구현까지',
+        introduction:
+            '물리학 전공으로 학업을 이어가던 중 창업과 제품 개발에 흥미를 느껴 개발을 시작했습니다. 창업팀에서 React/Next.js와 React Native 기반 제품을 만들며, 초기 아이디어와 요구사항을 실제 동작하는 웹·앱 MVP로 구체화해 왔습니다.',
+        highlights: [
+            'Career Wellness의 첫 기획부터 제품 개발에 참여해 핵심 기능을 다수 구현했고, 실제 결제가 이뤄지는 서비스로 출시했습니다. 서비스는 현재도 운영 중입니다.',
+            '사용자 흐름과 기능을 설계하고, 웹·앱 구현부터 공통 모듈과 배포 구조까지 제품의 초기 구축에 참여했습니다.',
+            '커리어 AI 제품 개발을 주도해 2023 Naver AI RUSH 최종 3개 기업에 선정됐고, DAN23에서 발표할 수 있는 기회를 얻어 회사를 널리 알리고, 네이버 마케팅 기회와 후속 협업으로 이어지는 데 기여했습니다.',
         ],
     },
 };
@@ -80,32 +84,26 @@ const AboutMe = () => {
     return (
         <section className="pb-section" id="about-me">
             <div className="container" ref={container}>
-                <h2 className="text-4xl md:text-6xl font-thin mb-20 slide-up-and-fade">
-                    {copy.headline}
-                </h2>
-
                 <p className="pb-3 border-b text-muted-foreground slide-up-and-fade">
                     {copy.label}
                 </p>
 
-                <div className="grid md:grid-cols-12 mt-9">
-                    <div className="md:col-span-5">
-                        <p className="text-5xl slide-up-and-fade">
-                            {copy.greeting}
-                        </p>
-                    </div>
-                    <div className="md:col-span-7">
-                        <div className="text-lg text-muted-foreground max-w-[560px]">
-                            {copy.paragraphs.map((paragraph, index) => (
-                                <p
-                                    className={index > 0 ? 'mt-3 slide-up-and-fade' : 'slide-up-and-fade'}
-                                    key={paragraph}
-                                >
-                                    {paragraph}
-                                </p>
-                            ))}
-                        </div>
-                    </div>
+                <h2 className="mt-9 max-w-5xl text-4xl font-thin leading-tight md:text-6xl slide-up-and-fade">
+                    {copy.headline}
+                </h2>
+
+                <div className="mt-9 grid gap-7 md:grid-cols-12">
+                    <p className="text-lg leading-relaxed text-muted-foreground md:col-span-5 slide-up-and-fade">
+                        {copy.introduction}
+                    </p>
+                    <ul className="space-y-5 text-lg leading-relaxed text-muted-foreground md:col-span-7">
+                        {copy.highlights.map((highlight) => (
+                            <li className="flex gap-3 slide-up-and-fade" key={highlight}>
+                                <span className="mt-3 size-1.5 shrink-0 rounded-full bg-primary" />
+                                <span>{highlight}</span>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </div>
         </section>
