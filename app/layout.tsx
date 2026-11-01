@@ -31,9 +31,57 @@ const robotoFlex = Roboto_Flex({
 
 
 export const metadata: Metadata = {
-    title: 'HotHyun | Product Engineer',
+    metadataBase: new URL('https://portfolio.hothyun.com'),
+    title: {
+        default: 'HotHyun | Product Engineer',
+        template: '%s | HotHyun',
+    },
     description:
-        'Product Engineer building web and mobile MVPs from early ideas. Career Wellness, NAVER AI RUSH, and product engineering work by HotHyun.',
+        'HotHyun is a Product Engineer building web and mobile products from idea to launch. Explore work in product engineering, React, Next.js, React Native, and practical AI.',
+    applicationName: 'HotHyun Portfolio',
+    authors: [{ name: 'HotHyun', url: 'https://portfolio.hothyun.com' }],
+    creator: 'HotHyun',
+    keywords: [
+        'HotHyun',
+        'Product Engineer',
+        'Product Engineering',
+        'React',
+        'Next.js',
+        'React Native',
+        'MVP',
+        'AI products',
+    ],
+    alternates: {
+        canonical: '/',
+    },
+    robots: {
+        index: true,
+        follow: true,
+    },
+    openGraph: {
+        type: 'website',
+        url: 'https://portfolio.hothyun.com',
+        siteName: 'HotHyun Portfolio',
+        title: 'HotHyun | Product Engineer',
+        description:
+            'Product Engineer building web and mobile products from idea to launch.',
+        locale: 'en_US',
+        images: [
+            {
+                url: '/og-image.png',
+                width: 1200,
+                height: 630,
+                alt: 'HotHyun on a black background',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'HotHyun | Product Engineer',
+        description:
+            'Product Engineer building web and mobile products from idea to launch.',
+        images: ['/og-image.png'],
+    },
 };
 
 export default function RootLayout({
