@@ -14,21 +14,21 @@ const STACK_LABELS = {
     en: {
         title: 'My Stack',
         categories: {
-            web: 'web',
-            mobile: 'mobile',
-            serverData: 'server · data',
-            aiProduct: 'AI product',
-            developmentDeployment: 'development · deployment',
+            web: 'Web',
+            mobile: 'Mobile',
+            serverData: 'Backend & Data',
+            aiProduct: 'AI & LLM',
+            developmentDeployment: 'Development & Deployment',
         },
     },
     ko: {
-        title: 'My Stack',
+        title: '기술 스택',
         categories: {
-            web: 'web',
-            mobile: 'mobile',
-            serverData: 'server · data',
-            aiProduct: 'AI product',
-            developmentDeployment: 'development · deployment',
+            web: '웹',
+            mobile: '모바일',
+            serverData: '서버 · 데이터',
+            aiProduct: 'AI · LLM',
+            developmentDeployment: '개발 · 배포',
         },
     },
 };
@@ -103,15 +103,13 @@ const Skills = () => {
                                         className="slide-up flex gap-3.5 items-center leading-none"
                                         key={item.name}
                                     >
-                                        {item.icon && (
-                                            <Image
-                                                src={item.icon}
-                                                alt={item.name}
-                                                width="40"
-                                                height="40"
-                                                className="max-h-10"
-                                            />
-                                        )}
+                                        <Image
+                                            src={item.icon}
+                                            alt={item.name}
+                                            width={item.iconWidth ?? 40}
+                                            height={item.iconHeight ?? 40}
+                                            className="max-h-10 max-w-[160px] w-auto object-contain"
+                                        />
                                         <span className="text-2xl">
                                             {item.name}
                                         </span>
