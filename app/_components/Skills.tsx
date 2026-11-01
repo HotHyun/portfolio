@@ -14,23 +14,21 @@ const STACK_LABELS = {
     en: {
         title: 'My Stack',
         categories: {
-            frontend: 'frontend',
-            app: 'app',
-            backend: 'backend',
-            database: 'database',
-            tools: 'tools',
-            ai: 'ai',
+            web: 'web',
+            mobile: 'mobile',
+            serverData: 'server · data',
+            aiProduct: 'AI product',
+            developmentDeployment: 'development · deployment',
         },
     },
     ko: {
         title: 'My Stack',
         categories: {
-            frontend: 'frontend',
-            app: 'app',
-            backend: 'backend',
-            database: 'database',
-            tools: 'tools',
-            ai: 'ai',
+            web: 'web',
+            mobile: 'mobile',
+            serverData: 'server · data',
+            aiProduct: 'AI product',
+            developmentDeployment: 'development · deployment',
         },
     },
 };
@@ -105,7 +103,7 @@ const Skills = () => {
                                         className="slide-up flex gap-3.5 items-center leading-none"
                                         key={item.name}
                                     >
-                                        <div>
+                                        {item.icon && (
                                             <Image
                                                 src={item.icon}
                                                 alt={item.name}
@@ -113,8 +111,8 @@ const Skills = () => {
                                                 height="40"
                                                 className="max-h-10"
                                             />
-                                        </div>
-                                        <span className="text-2xl capitalize">
+                                        )}
+                                        <span className="text-2xl">
                                             {item.name}
                                         </span>
                                     </div>

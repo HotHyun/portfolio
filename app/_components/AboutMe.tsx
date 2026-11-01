@@ -10,22 +10,22 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 const COPY = {
     en: {
         headline:
-            'I turn problem hypotheses into testable MVPs, then refine them into products users actually need.',
+            'I turn early product ideas into working web and mobile MVPs.',
         label: 'This is me.',
         greeting: "Hi, I'm HotHyun.",
         paragraphs: [
-            'Hello, I am HotHyun, a software engineer who wants to create positive impact. There are many ways to do that, but building software products that solve problems in specific communities feels like the path that fits me best.',
-            'I am currently serving as a Navy Software Developer. Previously, I worked for two years as a Software Engineer at early-stage startup gazilab, where I built and launched multiple products. I started by quickly building early products and learning from user feedback, then took ownership of improving their structure and gained experience across the full product development process.',
+            'After studying physics, I was drawn to startups and the work of making products. I enjoy taking an early idea and turning it into a working web or app MVP, collaborating across product planning and engineering.',
+            'I am currently serving as a Navy SW Developer. Before that, I worked at the early-stage startup gazilab, building web, mobile, and AI products. I helped create Career Wellness from its first planning sessions through launch, implemented many of its core features alongside another engineer, and connected the payment flow. The service is still operating. I also proposed the AI RUSH project and built its Career AI product from concept to completion as the sole developer; it was selected among the final three companies at 2023 NAVER AI RUSH and presented by our CEO at DAN23.',
         ],
     },
     ko: {
         headline:
-            '가설 검증이 가능한 MVP를 만들고, 사용자에게 필요한 제품으로 발전시킵니다.',
+            '초기 아이디어를 실제 동작하는 웹·앱 MVP로 구현합니다.',
         label: 'This is me.',
         greeting: '안녕하세요, HotHyun입니다.',
         paragraphs: [
-            '안녕하세요! Software Engineer HotHyun입니다. 저는 누군가에게 선한 영향력을 주고 싶은 사람입니다. 소프트웨어 제품을 만들어 특정 사회의 문제를 해결하는 일이 저와 가장 잘 맞는 방식이라고 생각합니다.',
-            '현재 해군 SW 개발병으로 군 복무 중이며, 이전에는 초기 스타트업 gazilab에서 2년간 Software Engineer로 여러 제품을 개발하고 런칭했습니다. 초기 제품을 빠르게 만들고 사용자 반응을 확인하는 일에서 시작해, 이후 제품이 안정적으로 운영되고 확장될 수 있도록 구조를 개선하는 일까지 도맡아 제품 전반의 개발을 경험해보았습니다.',
+            '물리학을 공부하다 창업과 제품 개발에 끌려 개발을 시작했습니다. 저는 초기 아이디어를 실제로 동작하는 웹·앱 MVP로 구체화하고, 기획과 개발을 오가며 제품의 첫 버전을 만드는 Product Engineer입니다.',
+            '현재 해군 SW 개발병으로 복무 중입니다. 이전에는 초기 스타트업 가지랩에서 웹·앱·AI 제품을 만들었습니다. Career Wellness는 동료 개발자와 첫 기획부터 출시까지 함께했고, 주요 기능을 다수 구현해 결제 파이프라인을 갖춘 서비스로 출시했습니다. 서비스는 지금도 운영 중입니다. 또 AI RUSH 참가를 대표에게 직접 제안했고, Career AI 제품을 기획부터 완성까지 단독 개발해 2023 NAVER AI RUSH 최종 3개 기업에 선정됐습니다. DAN23에서는 대표가 제품을 발표했습니다.',
         ],
     },
 };

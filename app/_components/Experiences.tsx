@@ -16,28 +16,7 @@ const COPY = {
     },
     ko: {
         title: 'My Experience',
-        items: [
-            {
-                title: '해군 SW 개발병',
-                company: '대한민국 해군',
-                duration: '2025 - 현재',
-            },
-            {
-                title: 'Software Engineer',
-                company: 'gazilab',
-                duration: '2023 - 2025',
-            },
-            {
-                title: 'Mobile App Developer',
-                company: 'PAM+NET DApp Project',
-                duration: '2022 - 2023',
-            },
-            {
-                title: 'Physics Undergraduate',
-                company: 'POSTECH',
-                duration: '2021 - 현재',
-            },
-        ],
+        items: MY_EXPERIENCE,
     },
 };
 
@@ -93,15 +72,18 @@ const Experiences = () => {
 
                 <div className="grid gap-14">
                     {copy.items.map((item) => (
-                        <div key={item.title} className="experience-item">
+                        <div key={item.company.en} className="experience-item">
                             <p className="text-xl text-muted-foreground">
-                                {item.company}
+                                {item.company[language]}
                             </p>
                             <p className="text-5xl font-anton leading-none mt-3.5 mb-2.5">
-                                {item.title}
+                                {item.title[language]}
                             </p>
                             <p className="text-lg text-muted-foreground">
-                                {item.duration}
+                                {item.period[language]}
+                            </p>
+                            <p className="text-lg text-muted-foreground max-w-3xl mt-4 leading-relaxed">
+                                {item.description[language]}
                             </p>
                         </div>
                     ))}

@@ -31,9 +31,9 @@ const robotoFlex = Roboto_Flex({
 
 
 export const metadata: Metadata = {
-    title: 'HotHyun - Software Engineer',
+    title: 'HotHyun | Product Engineer',
     description:
-        'Software Engineer HotHyun portfolio. Full-stack development, AI applications, automation tools, and product engineering.',
+        'Product Engineer building web and mobile MVPs from early ideas. Career Wellness, NAVER AI RUSH, and product engineering work by HotHyun.',
 };
 
 export default function RootLayout({

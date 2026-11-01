@@ -13,43 +13,42 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const COPY = {
     en: {
-        titleTop: 'SOFTWARE',
+        titleTop: 'PRODUCT',
         titleBottom: 'ENGINEER',
         intro: (
             <>
-                Hi! I&apos;m{' '}
+                Hi, I&apos;m{' '}
                 <span className="font-medium text-foreground">HotHyun</span>. I
-                identify problems faced by specific people and build software to
-                solve them, creating positive impact through my work.
+                turn early product ideas into working web and mobile MVPs, from
+                the first plan to a product people can use.
             </>
         ),
         button: "Let's Talk",
         resume: 'Resume',
-        status: 'Currently serving as a Navy Software Developer',
+        status: 'Currently serving as a Navy SW Developer',
         stats: [
-            { value: '4+', label: 'Years as Software Engineer' },
-            { value: '10+', label: 'Software Products' },
-            { value: 'POSTECH', label: 'Physics Student' },
+            { value: '4+', label: 'Years building software' },
+            { value: '0→1', label: 'MVPs from first idea' },
+            { value: 'TOP 3', label: '2023 NAVER AI RUSH' },
         ],
     },
     ko: {
-        titleTop: 'SOFTWARE',
+        titleTop: 'PRODUCT',
         titleBottom: 'ENGINEER',
         intro: (
             <>
-                안녕하세요{' '}
+                초기 아이디어를 실제 동작하는 웹·앱 MVP로 구체화하는{' '}
                 <span className="font-medium text-foreground">HotHyun</span>
-                입니다. 특정 사람들이 겪는 문제를 파악하고, 이를 해결하기 위한
-                Software를 만들어 좋은 영향을 남기는 일을 합니다.
+                입니다. 기획부터 구현까지 제품의 첫 버전을 만드는 일을 좋아합니다.
             </>
         ),
         button: "Let's Talk",
         resume: 'Resume',
         status: '현재 해군 SW 개발병으로 복무 중',
         stats: [
-            { value: '4+', label: '소프트웨어 엔지니어 경력' },
-            { value: '10+', label: '소프트웨어 개발 참여' },
-            { value: 'POSTECH', label: '물리학과 재학생' },
+            { value: '4+', label: '소프트웨어를 만든 시간' },
+            { value: '0→1', label: '아이디어에서 MVP까지' },
+            { value: 'TOP 3', label: '2023 NAVER AI RUSH' },
         ],
     },
 };

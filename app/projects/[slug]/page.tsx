@@ -16,10 +16,8 @@ export const generateMetadata = async ({
     const project = PROJECTS.find((project) => project.slug === slug);
 
     return {
-        title: `${project?.title} - ${project?.techStack
-            .slice(0, 3)
-            .join(', ')}`,
-        description: project?.description,
+        title: project ? `${project.title.ko} | HotHyun` : 'HotHyun Portfolio',
+        description: project?.summary.ko,
     } as Metadata;
 };
 
