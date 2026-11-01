@@ -64,7 +64,7 @@ export const metadata: Metadata = {
         siteName: 'HotHyun Portfolio',
         title: 'HotHyun | Product Engineer',
         description:
-            'Product Engineer building web and mobile products from idea to launch.',
+            'HotHyun is a Product Engineer building web and mobile products from early ideas to launch, with experience in React, Next.js, React Native, and practical AI.',
         locale: 'en_US',
         images: [
             {
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'HotHyun | Product Engineer',
         description:
-            'Product Engineer building web and mobile products from idea to launch.',
+            'HotHyun is a Product Engineer building web and mobile products from early ideas to launch, with experience in React, Next.js, React Native, and practical AI.',
         images: ['/og-image.png'],
     },
 };
